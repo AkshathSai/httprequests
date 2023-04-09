@@ -6,11 +6,13 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Date;
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
-public class AsyncGetRequest {
+public class AsyncResponseOnFile {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
 
@@ -24,20 +26,21 @@ public class AsyncGetRequest {
 
         System.out.println("Creating Future. Time: " + new Date());
 
-        CompletableFuture<HttpResponse<String>> future = null;
-        future = client.sendAsync(request, HttpResponse.BodyHandlers.ofString());
+        CompletableFuture<HttpResponse<Path>> future = null;
+        future = client.sendAsync(
+                request,
+                HttpResponse.BodyHandlers.ofFile(Paths.get("response_async.txt")));
 
         System.out.println("Future created. Time: " + new Date());
 
-        System.out.println("Sleeping for a few seconds now...");
+        System.out.println("Sleeping for a few seconds...");
         Thread.sleep(8000);
-        System.out.println("Waking up...Let's see where the response is!");
+        System.out.println("Waking up... Let's see where the response is!");
 
-        String resp = future.thenApply(HttpResponse::body).get();
-         
-        System.out.println("Parsing the response. Time: " + new Date());
+        Path resp = future.thenApply(HttpResponse::body).get();
+        System.out.println("Parsing the response... Time: " + new Date());
         JSONObject jsonObject = new JSONObject(resp);
-        System.out.println("JSON: \n" + jsonObject.toString(4));
+        System.out.println("JSON: " + jsonObject.toString(4));
 
     }
 }
