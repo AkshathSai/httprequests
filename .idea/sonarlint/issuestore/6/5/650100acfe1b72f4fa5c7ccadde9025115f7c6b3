@@ -1,0 +1,18 @@
+
+g	java:S1129"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8£úŠºñ0
+g	java:S112;"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8£úŠºñ0
+g	java:S112="FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8£úŠºñ0
+g	java:S112?"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8£úŠºñ0
+f
+java:S2147:"DCombine this catch with the one at line 56, which has the same body.(†Ñ„©ûÿÿÿÿ8«úŠºñ0
+f
+java:S2147<"DCombine this catch with the one at line 58, which has the same body.(ĞĞ¹óúÿÿÿÿ8«úŠºñ0
+a
+java:S2147>"DCombine this catch with the one at line 60, which has the same body.(ï­£Ä8«úŠºñ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ú—ÃÉúÿÿÿÿ8­úŠºñ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(ÿ¢ç¿ıÿÿÿÿ8­úŠºñ0
+Z	java:S106"9Replace this use of System.out or System.err by a logger.(œ²¥îøÿÿÿÿ8­úŠºñ0
+V
+java:S4719#"9Replace charset name argument with StandardCharsets.UTF_8(ûä Â8®úŠºñ0
+Z	java:S106-"9Replace this use of System.out or System.err by a logger.(„å²´øÿÿÿÿ8¯úŠºñ0
+U	java:S106/"9Replace this use of System.out or System.err by a logger.(ş´Ã‰8°úŠºñ0
